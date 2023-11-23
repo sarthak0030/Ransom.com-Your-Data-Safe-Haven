@@ -1,0 +1,607 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	background: #28282b;
+}
+
+body {
+	font-family: 'Nunito', monospace;
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+.js body {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.js body.demo-kidnap {
+	transition: background-color 0.3s, opacity 0.3s;
+} 
+
+.js body.render {
+	opacity: 1;
+}
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-background);
+}
+
+.js .loading::after {
+	content: '';
+	box-shadow: 20px 0 0, -20px 0 0;
+	position: fixed;
+	z-index: 10000;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	margin: -5px 0 0 -5px;
+	pointer-events: none;
+	border-radius: 50%;
+	background: var(--color-text);
+	animation: loaderAnim 1s ease-in-out infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	0% {
+		box-shadow: 20px 0 0 var(--color-text), -20px 0 0 transparent;
+		background: transparent;
+	}
+	50% {
+		box-shadow: 20px 0 0 transparent, -20px 0 0 transparent;
+		background: var(--color-text);
+	}
+	100% {
+		box-shadow: 20px 0 0 transparent, -20px 0 0 var(--color-text);
+		background: transparent;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: var(--color-link-hover);
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.btn1{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: .7rem 1.8rem;
+    padding-left: 10rem;
+    padding-top: 2.5rem;
+    background: transparent;
+    color:#F2F7FF;
+    border: none;
+}
+
+.btn1:hover{
+    color: #d5c12e;
+    cursor: pointer;
+}
+
+.header .btn3{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: .7rem 1.8rem;
+    padding-left: 10rem;
+    padding-top: 2.5rem;
+    background: transparent;
+    color:#F2F7FF;
+    border: none;
+}
+
+.header .btn3:hover{
+    color: #d5c12e;
+    cursor: pointer;
+}
+
+.btn2{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+    width: 8rem;
+    height: 7rem;
+    color:#F2F7FF;
+    align-items: center;
+    background-color:#d5c12e;
+    box-shadow: inset 0 0 0 0 #d5c12e;
+    transition: ease-out 0.2s;
+    border: none;
+    outline: none;
+}
+
+.btn2:hover{
+    box-shadow: inset 8rem 0 0 0 #d5c12e;
+    cursor: pointer;
+}
+
+header .border{
+    position: absolute;
+    top: 6.9rem;
+    left: 123px;
+    border-bottom: .1rem solid #d5c12e;
+    width: 84%;
+}
+
+header{
+    position: sticky;
+    top: 0; 
+    left: 0;
+    height: 7rem;
+    z-index: 100000;
+    width:100%;
+    padding-left: 4rem;
+    padding-right: 7.5rem;
+    /*border-bottom: .1rem solid #aa00ff8f;*/
+    background-color: #28282b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    padding-top: 1.8rem;
+    height: 4.4rem;
+    margin-left: 4rem;
+    margin-right: 10px;
+    margin-bottom: .5rem;
+}
+
+header .navbar ul{
+    padding-left: 9.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin-left: 3rem;
+}
+
+header .navbar ul li a{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #F2F7FF;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover{
+    font-weight: 360;
+    color: #d5c12e;
+}
+
+header .navbar ul .head.active{
+    font-weight: 360;
+    color: #d5c12e;
+    
+}
+
+.navbar1{
+    margin-bottom: 2rem;
+    margin-right: .5rem;
+}
+
+
+.navbar1 span{
+    font-size: 18px;
+    font-weight: 600;
+    color: #d5c12e;
+    margin-left: 7px;
+}
+
+.mor-container{
+    position: relative;
+    height: 618%;
+    background-size: 96rem 283rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+}
+
+.mor-container h2{
+    background: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 45% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(12px -24px 25px rgb(0, 0, 0));
+    font-size: 70px;
+    font-weight: 780;
+    letter-spacing: 0;
+    align-items: center;
+}
+
+.card {
+    height: 955px;
+    width: 1151.5px;
+    border-radius: 15px;
+    margin-top: 5.5rem;
+    /* other styles */
+    background: rgba(20, 20, 20, 0.751);
+    backdrop-filter: blur(60px);
+    /* fallback cross browser compatibility */
+    -webkit-backdrop-filter: blur(60px);
+    z-index: 10;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.card1{
+    height: 930px;
+    width: 1151.5px;
+    border-radius: 15px;
+    margin-top: 5.5rem;
+    /* other styles */
+    background: rgba(20, 20, 20, 0.751);
+    backdrop-filter: blur(60px);
+    /* fallback cross browser compatibility */
+    -webkit-backdrop-filter: blur(60px);
+    z-index: 10;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.card2{
+    height: 960px;
+    width: 1151.5px;
+    border-radius: 15px;
+    margin-top: 5.5rem;
+    /* other styles */
+    background: rgba(20, 20, 20, 0.751);
+    backdrop-filter: blur(60px);
+    /* fallback cross browser compatibility */
+    -webkit-backdrop-filter: blur(60px);
+    z-index: 10;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.card3{
+    height: 970px;
+    width: 1151.5px;
+    border-radius: 15px;
+    margin-top: 5.5rem;
+    /* other styles */
+    background: rgba(20, 20, 20, 0.751);
+    backdrop-filter: blur(60px);
+    /* fallback cross browser compatibility */
+    -webkit-backdrop-filter: blur(60px);
+    z-index: 10;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.card .img1{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 12px 0 0 0;
+}
+.card .img2{
+    width: 376.5px;
+    height: 270px;
+}
+.card .img3{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 12px 0 0;
+}
+
+.card>div>p {
+    letter-spacing: 0px;
+    text-align: left;
+    word-spacing: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card>div>h1 {
+    margin-top: 30px;
+	color: #d5c12e;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300px;
+    font-size: 25px;
+}
+
+.card button{
+    position: absolute;
+    font-size: 19px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 9.5rem;
+    z-index: 2000;
+    background-image: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 150% auto;
+    box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.4s;
+    margin-top: 2.7rem;
+    margin-left: 30.8rem;
+    color: #F2F7FF;
+    cursor: pointer;
+    border: none;
+}
+
+.card button:hover{
+    box-shadow: inset 13.5rem 0 0 0 transparent;
+}
+
+.card1 .img1{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 12px 0 0 0;
+}
+
+.card1 .img2{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 0 0 0;
+}
+
+.card1 .img3{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 12px 0 0;
+}
+
+
+.card1>div>p {
+    letter-spacing: 0px;
+    text-align: left;
+    word-spacing: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card1>div>h1 {
+    margin-top: 30px;
+	color: #d5c12e;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300px;
+    font-size: 25px;
+}
+
+.card1 button{
+    position: absolute;
+    font-size: 19px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 9.5rem;
+    z-index: 2000;
+    background-image: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 150% auto;
+    box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.4s;
+    margin-top: 2.7rem;
+    margin-left: 30.8rem;
+    color: #F2F7FF;
+    cursor: pointer;
+    border: none;
+}
+
+.card1 button:hover{
+    box-shadow: inset 13.5rem 0 0 0 transparent;
+}
+
+.card2 .img1{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 12px 0 0 0;
+}
+
+.card2 .img2{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 0 0 0;
+}
+
+.card2 .img3{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 12px 0 0;
+}
+
+.card2>div>p {
+    letter-spacing: 0px;
+    text-align: left;
+    word-spacing: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card2>div>h1 {
+    margin-top: 30px;
+	color: #d5c12e;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300px;
+    font-size: 25px;
+}
+
+.card2 button{
+    position: absolute;
+    font-size: 19px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 9.5rem;
+    z-index: 2000;
+    background-image: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 150% auto;
+    box-shadow: inset 0 0 0 0;
+    transition: ease-out 0.2s;
+    margin-top: 2.7rem;
+    margin-left: 30.8rem;
+    color: #F2F7FF;
+    cursor: pointer;
+    border: none;
+}
+
+.card2 button:hover{
+    box-shadow: inset 13.5rem 0 0 0 transparent;
+}
+
+.card3 .img1{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 12px 0 0 0;
+}
+
+.card3 .img2{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 0 0 0;
+}
+
+.card3 .img3{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 12px 0 0;
+}
+
+.card3>div>p {
+    letter-spacing: 0px;
+    text-align: left;
+    word-spacing: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card3>div>h1 {
+    margin-top: 30px;
+	color: #d5c12e;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300px;
+    font-size: 25px;
+}
+
+.card3 button{
+    position: absolute;
+    font-size: 19px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 9.5rem;
+    z-index: 2000;
+    background-image: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 150% auto;
+    box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.4s;
+    margin-top: 2.7rem;
+    margin-left: 30.8rem;
+    color: #F2F7FF;
+    cursor: pointer;
+    border: none;
+}
+
+.card3 button:hover{
+    box-shadow: inset 13.5rem 0 0 0 transparent;
+}
+
+.card4 .img1{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 12px 0 0 0;
+}
+
+.card4 .img2{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 0 0 0;
+}
+
+.card4 .img3{
+    width: 376.5px;
+    height: 270px;
+    border-radius: 0 12px 0 0;
+}
+
+.card4>div>p {
+    letter-spacing: 0px;
+    text-align: left;
+    word-spacing: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card4>div>h1 {
+    margin-top: 10px;
+	color: #d5c12e;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300px;
+    font-size: 25px;
+}
+
+.card4 button{
+    position: absolute;
+    font-size: 19px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 9.5rem;
+    z-index: 2000;
+    background-image: linear-gradient(to right, #f6e040, #b09e19);
+    background-size: 150% auto;
+    box-shadow: inset 0 0 0 0;
+    transition: ease-out 0.2s;
+    margin-top: 2.7rem;
+    margin-left: 30.8rem;
+    color: #F2F7FF;
+    cursor: pointer;
+    border: none;
+}
+
+.card4 button:hover{
+    box-shadow: inset 13.5rem 0 0 0 transparent;
+}
+
