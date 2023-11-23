@@ -47,8 +47,8 @@
 
 I'd and Password for the Admin login is as follows<br>
 
-* I'd= admin<br>
-* Password= admin<br>
+* I'd= Admin<br>
+* Password= Admin@123<br>
 
 <div align="center">
   
