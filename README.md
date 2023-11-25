@@ -85,7 +85,7 @@ I'd and Password for the Admin login is as follows<br>
    * 👾 Outside the world of tech. I love pushing myself to develop new skills rainging from basketball, sketching all the way to learning new computer languages
    * 🏀 I love playing baskeball as it improves my concentration power, increases my team work ability and helps me to tackle new problems
    * 📫 How to reach me patilsarthak00030@gmail.com
-   * 💬 Ask me about anything, I will be happy to help
+   * 💬 Ask me about anything, I will be happy to help.
  
 <div align="center">
 
